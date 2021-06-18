@@ -24,6 +24,24 @@
         {
         }
 
+        public DbSet<Bank> Banks { get; set; }
+
+        public DbSet<TypeOfDeposit> TypeOfDeposits { get; set; }
+
+        public DbSet<TypeOfPaymentOfInterest> TypeOfPaymentOfInterests { get; set; }
+
+        public DbSet<WhoIsDepositFor> WhoIsDepositFor { get; set; }
+
+        public DbSet<TypeOfInterest> TypeOfInterests { get; set; }
+
+        public DbSet<AdditionOfAmounts> AdditionOfAmounts { get; set; }
+
+        public DbSet<OverdraftPossibility> OverdraftPossibilities { get; set; }
+
+        public DbSet<OpportunityForCredit> OpportunityForCredit { get; set; }
+
+        public DbSet<Deposit> Deposits { get; set; }
+
         public DbSet<Setting> Settings { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);

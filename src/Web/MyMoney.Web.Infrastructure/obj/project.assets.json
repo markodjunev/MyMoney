@@ -67,11 +67,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
       "projectName": "MyMoney.Web.Infrastructure",
-      "projectPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

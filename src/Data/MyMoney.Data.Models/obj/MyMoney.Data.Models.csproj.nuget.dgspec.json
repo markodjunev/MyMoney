@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
         "projectName": "MyMoney.Data.Common",
-        "projectPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj",
         "projectName": "MyMoney.Data.Models",
-        "projectPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Models\\MyMoney.Data.Models.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Models\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -106,8 +106,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj"
               }
             }
           }

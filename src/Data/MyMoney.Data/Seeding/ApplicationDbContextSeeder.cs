@@ -29,6 +29,14 @@
                               new SettingsSeeder(),
                               new UsersSeeder(),
                               new AdministratorsSeeder(),
+                              new BanksSeeder(),
+                              new TypeOfDepositsSeeder(),
+                              new TypeOfPaymentOfInterestsSeeder(),
+                              new WhoIsDepositForSeeder(),
+                              new TypeOfInterestsSeeder(),
+                              new AdditionOfAmountsSeeder(),
+                              new OverdraftPossibilitiesSeeder(),
+                              new OpportunityForCreditSeeder(),
                           };
 
             foreach (var seeder in seeders)

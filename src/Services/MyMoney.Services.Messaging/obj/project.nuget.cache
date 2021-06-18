@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RpvV3zl+FJL1GNceHzoTeuuUXL7iBG1o25w/y1kKklCMMLXmsxa8uOMc8A/mnO84hw2MFb8WK3pfGaH1a0bFZg==",
+  "dgSpecHash": "SjuOWhIIoxgNyp0zayYOofCVqraIW8DUF92vOQSWeWWmJH1f/zS2v9y9SfuvMvw5gJUSImtwSg5iuFne/ZkghA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services.Messaging\\MyMoney.Services.Messaging.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services.Messaging\\MyMoney.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

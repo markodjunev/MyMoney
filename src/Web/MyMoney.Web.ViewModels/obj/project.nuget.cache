@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rKV+1g+iGBsiP7Rqv/YhuccWaVhPS6HJGwyte+5gYEKLjE05QihO6/BgxPQTWvsbLPURjPeEKyW+ePOgytnEcw==",
+  "dgSpecHash": "LbXhrnG5lyhM06HMqtRtG0Lg8ZF5122Wh3hr/+d2wUuvfYEHmH31tfXYAmmd2z9t0g1SrT3Xskd5bjJLNwhazA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Web\\MyMoney.Web.ViewModels\\MyMoney.Web.ViewModels.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web.ViewModels\\MyMoney.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",

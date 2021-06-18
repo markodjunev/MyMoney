@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
         "projectName": "MyMoney.Services",
-        "projectPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Services\\MyMoney.Services\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

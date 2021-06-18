@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R23YPCOGpZGT52+VvnviodInTTJcNhKSkZO8QoXoIzgzQ2ai64/PnbLHGAOVdv8p/u/ec3Wg+MLp9yKvn2va9w==",
+  "dgSpecHash": "IJALAgVRzXsMZlUfPITx6iVU2JFnnfhw4kU6mkn2CUrO94hA3GesbCYLPBIC1i4es+SxKquwACMkCNdGpORblw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\MyMoney\\src\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",
