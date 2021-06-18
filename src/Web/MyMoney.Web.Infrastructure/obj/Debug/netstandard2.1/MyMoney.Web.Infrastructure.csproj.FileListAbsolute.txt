@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\bin\Debug\netstandard2.1\MyMoney.Web.Infrastructure.deps.json
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\bin\Debug\netstandard2.1\MyMoney.Web.Infrastructure.dll
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\bin\Debug\netstandard2.1\MyMoney.Web.Infrastructure.pdb
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.dll
+C:\Users\User\Desktop\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.pdb

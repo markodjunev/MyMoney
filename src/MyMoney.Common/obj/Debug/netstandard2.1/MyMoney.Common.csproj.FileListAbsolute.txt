@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\bin\Debug\netstandard2.1\MyMoney.Common.deps.json
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\bin\Debug\netstandard2.1\MyMoney.Common.dll
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\bin\Debug\netstandard2.1\MyMoney.Common.pdb
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.AssemblyInfo.cs
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.dll
+C:\Users\User\Desktop\MyMoney\src\MyMoney.Common\obj\Debug\netstandard2.1\MyMoney.Common.pdb

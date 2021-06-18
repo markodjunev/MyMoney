@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Services.Data.deps.json
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Services.Data.dll
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Services.Data.pdb
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Data.Common.dll
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Data.Models.dll
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Services.Mapping.dll
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Data.Common.pdb
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Data.Models.pdb
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Services.Mapping.pdb
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.AssemblyInfo.cs
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.csproj.CopyComplete
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.dll
+C:\Users\User\Desktop\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.pdb
