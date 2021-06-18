@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nGRmSjifmkQ8xYJImaedLnTyMz8GuwJshknG/mmvBZ+hWJ0bikCd6SdzIAkHaBTcasGuV1tI/MxEiojMNTIY2w==",
+  "dgSpecHash": "caXJmMAeTKKANw53Fjgh0KjHFlJxFrcl8LuY0Y5iSK1CDHFjexCm2ujRNfCefUEMVecUpx1vdpZKIAMWQxqlQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Tests\\MyMoney.Web.Tests\\MyMoney.Web.Tests.csproj",
   "expectedPackageFiles": [
