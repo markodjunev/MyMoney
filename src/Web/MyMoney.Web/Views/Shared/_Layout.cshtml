@@ -23,12 +23,13 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Начало</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index">Настройки</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Поверителност</a>
-                        </li>
+                        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Administration" asp-controller="Deposits" 
+                                   asp-action="Create">Нов депозит</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

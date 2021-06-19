@@ -82,7 +82,7 @@
                 input.WhoIsDepositForId, input.TypeOfInterestId, input.AdditionOfAmountsId, input.OverdraftPossibilityId,
                 input.OpportunityForCreditId);
 
-            return this.Redirect("/");
+            return this.RedirectToAction("Details", "Deposits", new { area = string.Empty, id = depositId });
         }
     }
 }

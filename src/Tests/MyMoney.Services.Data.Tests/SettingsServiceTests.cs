@@ -4,15 +4,12 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using Microsoft.EntityFrameworkCore;
+    using Moq;
     using MyMoney.Data;
     using MyMoney.Data.Common.Repositories;
     using MyMoney.Data.Models;
     using MyMoney.Data.Repositories;
-
-    using Microsoft.EntityFrameworkCore;
-
-    using Moq;
-
     using Xunit;
 
     public class SettingsServiceTests

@@ -2,9 +2,8 @@
 {
     using System.Diagnostics;
 
-    using MyMoney.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
+    using MyMoney.Web.ViewModels;
 
     public class HomeController : BaseController
     {

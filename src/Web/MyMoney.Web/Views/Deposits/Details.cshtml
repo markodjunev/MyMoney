@@ -1,0 +1,90 @@
+﻿@model MyMoney.Web.ViewModels.Deposits.OutputViewModels.DepositDetailsViewModel;
+@{
+    this.ViewData["Title"] = "Депозит детайли";
+}
+
+<h2 class="text-center mb-2">@Model.Name</h2>
+
+<hr />
+
+<div class="d-flex justify-content-between">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="row">#</th>
+                    <th scope="row"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">Банка</th>
+                    <td><a href="#" class="link-dark">@Model.BankName</a></td>
+                </tr>
+                <tr>
+                    <th scope="col">Ефективна Годишна Лихва</th>
+                    <td>@Model.EffectiveAnnualInterestRate%</td>
+                </tr>
+                <tr>
+                    <th scope="col">Размер на депозита</th>
+                    <td>@Model.Amount</td>
+                </tr>
+                <tr>
+                    <th scope="col">Вид на депозита</th>
+                    <td>@Model.TypeOfDepositName</td>
+                </tr>
+                <tr>
+                    <th scope="col">Вид лихва</th>
+                    <td>@Model.TypeOfInterestName</td>
+                </tr>
+                <tr>
+                    <th scope="col">Изплащане на лихви</th>
+                    <td>@Model.TypeOfPaymentOfInterestName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="border-right">
+
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="row">#</th>
+                    <th scope="row"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">Валута</th>
+                    <td>@Model.Currency.ToString()</td>
+                </tr>
+                <tr>
+                    <th scope="col">Срок на депозита</th>
+                    <td>@Model.TermOfTheDeposit месеца</td>
+                </tr>
+                <tr>
+                    <th scope="col">За кого е депозита</th>
+                    <td>@Model.WhoIsDepositForName</td>
+                </tr>
+                <tr>
+                    <th scope="col">Довнасяне на суми</th>
+                    <td>@Model.AdditionOfAmountsName</td>
+                </tr>
+                <tr>
+                    <th scope="col">Възможност за овърдрафт</th>
+                    <td>@Model.OverdraftPossibilityName</td>
+                </tr>
+                <tr>
+                    <th scope="col">Възможност на кредит</th>
+                    <td>@Model.OpportunityForCreditName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr />
+<p class="mt-2 font-weight-light">Код на депозита: @Model.Id</p>

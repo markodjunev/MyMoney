@@ -1,11 +1,13 @@
 ﻿namespace MyMoney.Services.Data
 {
+    using System.Linq;
     using System.Threading.Tasks;
 
     using MyMoney.Data.Common.Repositories;
     using MyMoney.Data.Models;
     using MyMoney.Data.Models.Enums;
     using MyMoney.Services.Data.Interfaces;
+    using MyMoney.Services.Mapping;
 
     public class DepositsService : IDepositsService
     {
@@ -40,6 +42,13 @@
             await this.depositsRepository.AddAsync(deposit);
             await this.depositsRepository.SaveChangesAsync();
             return deposit.Id;
+        }
+
+        public T GetById<T>(string id)
+        {
+            var deposit = this.depositsRepository.All().Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+            return deposit;
         }
     }
 }

@@ -5,6 +5,11 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
     using MyMoney.Data;
     using MyMoney.Data.Common;
     using MyMoney.Data.Common.Repositories;
@@ -13,13 +18,6 @@
     using MyMoney.Data.Seeding;
     using MyMoney.Services.Data;
     using MyMoney.Services.Messaging;
-
-    using CommandLine;
-
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Logging;
 
     public static class Program
     {
