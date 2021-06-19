@@ -2,17 +2,6 @@
 {
     using System.Reflection;
 
-    using MyMoney.Data;
-    using MyMoney.Data.Common;
-    using MyMoney.Data.Common.Repositories;
-    using MyMoney.Data.Models;
-    using MyMoney.Data.Repositories;
-    using MyMoney.Data.Seeding;
-    using MyMoney.Services.Data;
-    using MyMoney.Services.Mapping;
-    using MyMoney.Services.Messaging;
-    using MyMoney.Web.ViewModels;
-
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -21,6 +10,17 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using MyMoney.Data;
+    using MyMoney.Data.Common;
+    using MyMoney.Data.Common.Repositories;
+    using MyMoney.Data.Models;
+    using MyMoney.Data.Repositories;
+    using MyMoney.Data.Seeding;
+    using MyMoney.Services.Data;
+    using MyMoney.Services.Data.Interfaces;
+    using MyMoney.Services.Mapping;
+    using MyMoney.Services.Messaging;
+    using MyMoney.Web.ViewModels;
 
     public class Startup
     {
@@ -65,6 +65,15 @@
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
+            services.AddTransient<IDepositsService, DepositsService>();
+            services.AddTransient<IBanksService, BanksService>();
+            services.AddTransient<ITypeOfDepositsService, TypeOfDepositsService>();
+            services.AddTransient<ITypeOfPaymentOfInterestsService, TypeOfPaymentOfInterestsService>();
+            services.AddTransient<IWhoIsDepositForService, WhoIsDepositForService>();
+            services.AddTransient<ITypeOfInterestsService, TypeOfInterestsService>();
+            services.AddTransient<IAdditionOfAmountsService, AdditionOfAmountsService>();
+            services.AddTransient<IOverdraftPossibilitiesService, OverdraftPossibilitiesService>();
+            services.AddTransient<IOpportunityForCreditService, OpportunityForCreditService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

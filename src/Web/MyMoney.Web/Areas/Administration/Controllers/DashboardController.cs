@@ -1,9 +1,8 @@
 ﻿namespace MyMoney.Web.Areas.Administration.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
     using MyMoney.Services.Data;
     using MyMoney.Web.ViewModels.Administration.Dashboard;
-
-    using Microsoft.AspNetCore.Mvc;
 
     public class DashboardController : AdministrationController
     {

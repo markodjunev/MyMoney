@@ -9,6 +9,7 @@
     using MyMoney.Web.ViewModels.Settings;
 
     using Microsoft.AspNetCore.Mvc;
+    using MyMoney.Services.Data.Interfaces;
 
     public class SettingsController : BaseController
     {

@@ -5,6 +5,7 @@
 
     using MyMoney.Data.Common.Repositories;
     using MyMoney.Data.Models;
+    using MyMoney.Services.Data.Interfaces;
     using MyMoney.Services.Mapping;
 
     public class SettingsService : ISettingsService
