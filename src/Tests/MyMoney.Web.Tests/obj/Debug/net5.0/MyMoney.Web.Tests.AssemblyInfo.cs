@@ -12,8 +12,8 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMoney.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data", "MyMoney.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMoney.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web", "MyMoney.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMoney.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Data\\MyMoney.Data", "MyMoney.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("MyMoney.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Web\\MyMoney.Web", "MyMoney.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyMoney.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

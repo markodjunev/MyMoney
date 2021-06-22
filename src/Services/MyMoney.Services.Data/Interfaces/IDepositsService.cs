@@ -1,5 +1,6 @@
 ﻿namespace MyMoney.Services.Data.Interfaces
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     using MyMoney.Data.Models.Enums;
@@ -11,5 +12,11 @@
             int overdraftPossibilityId, int opportunityForCreditId);
 
         T GetById<T>(string id);
+
+        IEnumerable<T> GetAll<T>();
+
+        IEnumerable<T> GetAllByCurrencyAndTypeOfPaymentOfInterestId<T>(TypeOfCurrency currency, int typeOfPaymentOfInterestId);
+
+        IEnumerable<T> GetAllByBankId<T>(string bankId);
     }
 }

@@ -1,0 +1,120 @@
+﻿@model MyMoney.Web.ViewModels.Home.Catalogue.ShowCatalogueViewModel
+@using MyMoney.Data.Models.Enums
+@{
+    this.ViewData["Title"] = "Каталог";
+    var banks = Model.Banks.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var typeOfPaymentOfInterest = Model.TypeOfPaymentOfInterests.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+}
+
+<br />
+<h2 class="text-center mb-2">Депозит - каталог на всички депозити</h2>
+<hr />
+
+<div class="d-flex flex-wrap justify-content-center align-items-center">
+    @{
+        @foreach (var bank in Model.Banks)
+        {
+            <div class="p-2">
+                <form asp-controller="Home"
+                      asp-action="FilterByBank"
+                      asp-route-id="@bank.Id">
+                    @*<a onclick="this.parentElement.submit()">@bank.Name</a>*@
+                    <input type="submit" value="@bank.Name" class="btn btn-outline-info" />
+                </form>
+            </div>
+        }
+    }
+</div>
+
+<hr />
+<br />
+<form method="post" asp-action="FilterByDropdowns">
+    <div class="form-row">
+
+        <div class="form-group col">
+            <select asp-for="@Model.Currency" asp-items="Html.GetEnumSelectList<TypeOfCurrency>()" class="form-control">
+                <option selected="selected" value="">Валута</option>
+            </select>
+            <span asp-validation-for="@Model.Currency" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col">
+            <select asp-for="@Model.TypeOfPaymentOfInterestId" asp-items="typeOfPaymentOfInterest" class="form-control">
+                <option selected="selected" value="">Изплащане на лихва</option>
+            </select>
+            <span asp-validation-for="@Model.TypeOfPaymentOfInterestId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Филтриране" class="btn btn-outline-primary" />
+        </div>
+
+    </div>
+</form>
+
+<hr />
+<br />
+
+@foreach (var deposit in Model.Deposits)
+{
+    <div class="border border-light rounded" style="padding: 10px 10px 15px 10px; border-width: 2px !important;">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-description-tab-@deposit.Id" data-toggle="tab" href="#nav-description-@deposit.Id" role="tab" aria-controls="nav-description-@deposit.Id" aria-selected="true">Описание</a>
+                <a class="nav-item nav-link" id="nav-details-tab-@deposit.Id" data-toggle="tab" href="#nav-details-@deposit.Id" role="tab" aria-controls="nav-details-@deposit.Id" aria-selected="false">Детайли</a>
+                <a class="nav-item nav-link" id="nav-contact-tab-@deposit.Id" data-toggle="tab" href="#nav-contact-@deposit.Id" role="tab" aria-controls="nav-contact-@deposit.Id" aria-selected="false">нещо2</a>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-wrap">
+            <div class="tab-content mr-auto p-2" id="nav-tabContent" style="min-height: 10em; min-width: 66%;">
+                <div class="tab-pane fade show active p-2" id="nav-description-@deposit.Id" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <h4>@deposit.BankName</h4>
+                    <h5>@deposit.Name</h5>
+                </div>
+                <div class="tab-pane fade p-2" id="nav-details-@deposit.Id" role="tabpanel" aria-labelledby="nav-details-tab">
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Минимална сума</th>
+                                    <th scope="col">Лихва</th>
+                                    <th scope="col">Изплащане на лихви</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@deposit.Amount</td>
+                                    <td>@deposit.TypeOfInterestName</td>
+                                    <td>@deposit.TypeOfPaymentOfInterestName</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade p-2" id="nav-contact-@deposit.Id" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                </div>
+
+            </div>
+            <div class="d-flex align-self-center">
+                <form 
+                    asp-controller="Deposits"
+                    asp-action="Details"
+                    asp-route-id="@deposit.Id"
+                      class="ml-auto p-2">
+                    <button type="submit" class="btn btn-outline-primary">ПОДРОБНОСТИ</button>
+                </form>
+                <form 
+                    asp-controller="Deposits"
+                    asp-action="Details"
+                    asp-route-id="@deposit.Id"
+                      class="ml-auto p-2">
+                    <button type="submit" class="btn btn-primary">ИЗЧИСЛИ</button>
+                </form>
+            </div>
+        </div> 
+    </div>  
+
+ <br />
+ }

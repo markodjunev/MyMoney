@@ -1,5 +1,6 @@
 ﻿namespace MyMoney.Services.Data
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -49,6 +50,36 @@
             var deposit = this.depositsRepository.All().Where(x => x.Id == id)
                 .To<T>().FirstOrDefault();
             return deposit;
+        }
+
+        public IEnumerable<T> GetAll<T>()
+        {
+            IQueryable<Deposit> query =
+                this.depositsRepository.All().OrderBy(x => x.Name);
+
+            return query.To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllByCurrencyAndTypeOfPaymentOfInterestId<T>(TypeOfCurrency currency, int typeOfPaymentOfInterestId)
+        {
+            IQueryable<Deposit> query =
+                this.depositsRepository
+                .All()
+                .Where(x => x.Currency.Equals(currency) && x.TypeOfPaymentOfInterestId == typeOfPaymentOfInterestId)
+                .OrderBy(x => x.Name);
+
+            return query.To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllByBankId<T>(string bankId)
+        {
+            IQueryable<Deposit> query =
+                this.depositsRepository
+                .All()
+                .Where(x => x.BankId == bankId)
+                .OrderBy(x => x.Name);
+
+            return query.To<T>().ToList();
         }
     }
 }

@@ -16,3 +16,12 @@ C:\Users\User\Documents\GitHub\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\ne
 C:\Users\User\Documents\GitHub\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.dll
 C:\Users\User\Documents\GitHub\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.pdb
 C:\Users\User\Documents\GitHub\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.csproj.AssemblyReference.cache
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\bin\Debug\netstandard2.1\MyMoney.Data.Common.deps.json
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\bin\Debug\netstandard2.1\MyMoney.Data.Common.dll
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\bin\Debug\netstandard2.1\MyMoney.Data.Common.pdb
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.csproj.AssemblyReference.cache
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.AssemblyInfoInputs.cache
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.AssemblyInfo.cs
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.dll
+C:\Users\st\source\repos\MyMoney\src\Data\MyMoney.Data.Common\obj\Debug\netstandard2.1\MyMoney.Data.Common.pdb

@@ -16,3 +16,12 @@ C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Mapping\obj
 C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.dll
 C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.pdb
 C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.csproj.AssemblyReference.cache
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\bin\Debug\netstandard2.1\MyMoney.Services.Mapping.deps.json
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\bin\Debug\netstandard2.1\MyMoney.Services.Mapping.dll
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\bin\Debug\netstandard2.1\MyMoney.Services.Mapping.pdb
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.csproj.AssemblyReference.cache
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.AssemblyInfo.cs
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.dll
+C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Mapping\obj\Debug\netstandard2.1\MyMoney.Services.Mapping.pdb
