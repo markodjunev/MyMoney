@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\MyMoney.Data.Common\MyMoney.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\MyMoney.Data.Models\MyMoney.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Web\MyMoney.Web.ViewModels\MyMoney.Web.ViewModels.csproj" />
     <ProjectReference Include="..\MyMoney.Services.Mapping\MyMoney.Services.Mapping.csproj" />
   </ItemGroup>
 

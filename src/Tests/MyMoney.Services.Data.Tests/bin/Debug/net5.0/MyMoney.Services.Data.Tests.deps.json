@@ -1932,7 +1932,8 @@
         "dependencies": {
           "MyMoney.Data.Common": "1.0.0",
           "MyMoney.Data.Models": "1.0.0",
-          "MyMoney.Services.Mapping": "1.0.0"
+          "MyMoney.Services.Mapping": "1.0.0",
+          "MyMoney.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "MyMoney.Services.Data.dll": {}
@@ -1944,6 +1945,15 @@
         },
         "runtime": {
           "MyMoney.Services.Mapping.dll": {}
+        }
+      },
+      "MyMoney.Web.ViewModels/1.0.0": {
+        "dependencies": {
+          "MyMoney.Data.Models": "1.0.0",
+          "MyMoney.Services.Mapping": "1.0.0"
+        },
+        "runtime": {
+          "MyMoney.Web.ViewModels.dll": {}
         }
       }
     }
@@ -3093,6 +3103,11 @@
       "sha512": ""
     },
     "MyMoney.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyMoney.Web.ViewModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

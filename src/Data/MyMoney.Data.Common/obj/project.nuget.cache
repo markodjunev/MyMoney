@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "J7pi5kR0oK+4mHwFu9htmWz1LgYVd91gGybAtX9Wt+KkUfKFGKc9B16HURLFadnlT2UIbZ//rTnJXxPk8Xpw/w==",
+  "dgSpecHash": "lLku0v+QKu2xiQyQA8xrQenoleCB7vYThJ6tcakzeXmXYnv7sTesDD7V38wmCh9rQApW5N+r3MZlSBgfnMD1zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data.Common\\MyMoney.Data.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\st\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
-    "C:\\Users\\st\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512",
-    "C:\\Users\\st\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

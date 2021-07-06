@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WntxlUAMAtFAeVqpInB4960OsFDp1bNUkkZDI2/7KWw2furLEh/JCfh558ijHr5KW60CqxXcN0b7tz624BK/uw==",
+  "dgSpecHash": "8n+COpmIcXZNk1nzo5DDNZACnBVycx1/Va+oPGMTKJvN7Gg3Xk0QsdJ9yFyxivUwJTFRTwJ4qGKc/KnJtZTOJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Web\\MyMoney.Web.Infrastructure\\MyMoney.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\st\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
-    "C:\\Users\\st\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.312\\stylecop.analyzers.1.2.0-beta.312.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.312\\stylecop.analyzers.unstable.1.2.0.312.nupkg.sha512"
   ],
   "logs": []
 }

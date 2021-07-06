@@ -2752,7 +2752,8 @@
         "dependencies": {
           "MyMoney.Data.Common": "1.0.0",
           "MyMoney.Data.Models": "1.0.0",
-          "MyMoney.Services.Mapping": "1.0.0"
+          "MyMoney.Services.Mapping": "1.0.0",
+          "MyMoney.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyMoney.Services.Data.dll": {}
@@ -2772,6 +2773,20 @@
         },
         "runtime": {
           "bin/placeholder/MyMoney.Services.Mapping.dll": {}
+        }
+      },
+      "MyMoney.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "MyMoney.Data.Models": "1.0.0",
+          "MyMoney.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyMoney.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyMoney.Web.ViewModels.dll": {}
         }
       }
     }
@@ -9040,6 +9055,11 @@
       "type": "project",
       "path": "../../Services/MyMoney.Services.Mapping/MyMoney.Services.Mapping.csproj",
       "msbuildProject": "../../Services/MyMoney.Services.Mapping/MyMoney.Services.Mapping.csproj"
+    },
+    "MyMoney.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/MyMoney.Web.ViewModels/MyMoney.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/MyMoney.Web.ViewModels/MyMoney.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9055,20 +9075,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\st\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\MyMoney.Services.Data.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\MyMoney.Services.Data.Tests.csproj",
       "projectName": "MyMoney.Services.Data.Tests",
-      "projectPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\MyMoney.Services.Data.Tests.csproj",
-      "packagesPath": "C:\\Users\\st\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\MyMoney.Services.Data.Tests.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Tests\\MyMoney.Services.Data.Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\st\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -9081,11 +9109,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Data\\MyMoney.Data\\MyMoney.Data.csproj": {
-              "projectPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Data\\MyMoney.Data\\MyMoney.Data.csproj"
+            "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data\\MyMoney.Data.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Data\\MyMoney.Data\\MyMoney.Data.csproj"
             },
-            "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Services\\MyMoney.Services.Data\\MyMoney.Services.Data.csproj": {
-              "projectPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Services\\MyMoney.Services.Data\\MyMoney.Services.Data.csproj"
+            "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services.Data\\MyMoney.Services.Data.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services.Data\\MyMoney.Services.Data.csproj"
             }
           }
         }

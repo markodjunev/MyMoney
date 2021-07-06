@@ -9,6 +9,7 @@
     using MyMoney.Data.Models.Enums;
     using MyMoney.Services.Data.Interfaces;
     using MyMoney.Services.Mapping;
+    using MyMoney.Web.ViewModels.Deposits.OutputViewModels;
 
     public class DepositsService : IDepositsService
     {
@@ -80,6 +81,35 @@
                 .OrderBy(x => x.Name);
 
             return query.To<T>().ToList();
+        }
+
+        public bool Exist(string id)
+        {
+            var exist = this.depositsRepository.All().Any(x => x.Id == id);
+
+            return exist;
+        }
+
+        public DepositCalculationViewModel GetCalculationViewModel(string id)
+        {
+            var deposit = this.depositsRepository.All().FirstOrDefault(x => x.Id == id);
+
+            var calculationViewModel = new DepositCalculationViewModel
+            {
+                Amount = deposit.Amount,
+                EffectiveAnnualInterestRate = deposit.EffectiveAnnualInterestRate,
+                TermOfTheDeposit = deposit.TermOfTheDeposit,
+            };
+
+            var finalAmount = 0m; // calculation
+
+            /*
+             implementation of final amount
+             */
+
+            calculationViewModel.FinalAmount = finalAmount;
+
+            return calculationViewModel;
         }
     }
 }

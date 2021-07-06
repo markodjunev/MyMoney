@@ -60,20 +60,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\st\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
       "projectName": "MyMoney.Services",
-      "projectPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
-      "packagesPath": "C:\\Users\\st\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\st\\source\\repos\\MyMoney\\src\\Services\\MyMoney.Services\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\MyMoney.Services.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\MyMoney\\src\\Services\\MyMoney.Services\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\st\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"

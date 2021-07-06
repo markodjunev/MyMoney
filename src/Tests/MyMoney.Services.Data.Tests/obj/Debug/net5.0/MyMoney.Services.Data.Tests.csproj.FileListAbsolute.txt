@@ -172,3 +172,5 @@ C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\obj
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\obj\Debug\net5.0\ref\MyMoney.Services.Data.Tests.dll
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\obj\Debug\net5.0\MyMoney.Services.Data.Tests.pdb
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\obj\Debug\net5.0\MyMoney.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\bin\Debug\net5.0\MyMoney.Web.ViewModels.dll
+C:\Users\User\Documents\GitHub\MyMoney\src\Tests\MyMoney.Services.Data.Tests\bin\Debug\net5.0\MyMoney.Web.ViewModels.pdb

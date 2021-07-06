@@ -46,3 +46,5 @@ C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\ne
 C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.csproj.CopyComplete
 C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.dll
 C:\Users\st\source\repos\MyMoney\src\Services\MyMoney.Services.Data\obj\Debug\netstandard2.1\MyMoney.Services.Data.pdb
+C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Web.ViewModels.dll
+C:\Users\User\Documents\GitHub\MyMoney\src\Services\MyMoney.Services.Data\bin\Debug\netstandard2.1\MyMoney.Web.ViewModels.pdb

@@ -15,14 +15,18 @@
 
         public IActionResult Details(string id)
         {
-            var deposit = this.depositsService.GetById<DepositDetailsViewModel>(id);
-
-            if (deposit == null)
+            if (this.depositsService.Exist(id) == false)
             {
                 return this.RedirectToAction("Error", "Home", new { area = string.Empty });
             }
 
-            return this.View(deposit);
+            var viewModel = new DepositInfoViewModel
+            {
+                DepositDetailsViewModel = this.depositsService.GetById<DepositDetailsViewModel>(id),
+                DepositCalculationViewModel = this.depositsService.GetCalculationViewModel(id),
+            };
+
+            return this.View(viewModel);
         }
     }
 }

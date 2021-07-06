@@ -1,10 +1,11 @@
 ﻿namespace MyMoney.Web.Controllers
 {
+    using System.Diagnostics;
+
     using Microsoft.AspNetCore.Mvc;
     using MyMoney.Data.Models.Enums;
     using MyMoney.Services.Data.Interfaces;
     using MyMoney.Web.ViewModels.Home.Catalogue;
-    using System.Diagnostics;
 
     public class HomeController : BaseController
     {
@@ -51,7 +52,6 @@
             return this.View(model);
         }
 
-        [HttpPost]
         public IActionResult FilterByDropdowns(int currency, int typeOfPaymentOfInterestId)
         {
             TypeOfCurrency currency1 = (TypeOfCurrency)currency;

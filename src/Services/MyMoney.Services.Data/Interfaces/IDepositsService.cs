@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using MyMoney.Data.Models.Enums;
+    using MyMoney.Web.ViewModels.Deposits.OutputViewModels;
 
     public interface IDepositsService
     {
@@ -18,5 +19,9 @@
         IEnumerable<T> GetAllByCurrencyAndTypeOfPaymentOfInterestId<T>(TypeOfCurrency currency, int typeOfPaymentOfInterestId);
 
         IEnumerable<T> GetAllByBankId<T>(string bankId);
+
+        bool Exist(string id);
+
+        DepositCalculationViewModel GetCalculationViewModel(string id);
     }
 }

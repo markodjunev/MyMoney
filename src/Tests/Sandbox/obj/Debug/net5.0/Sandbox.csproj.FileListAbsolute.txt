@@ -74,3 +74,5 @@ C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\obj\Debug\net5.0\Sandbo
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\obj\Debug\net5.0\ref\Sandbox.dll
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\obj\Debug\net5.0\Sandbox.pdb
 C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\obj\Debug\net5.0\Sandbox.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\bin\Debug\net5.0\MyMoney.Web.ViewModels.dll
+C:\Users\User\Documents\GitHub\MyMoney\src\Tests\Sandbox\bin\Debug\net5.0\MyMoney.Web.ViewModels.pdb

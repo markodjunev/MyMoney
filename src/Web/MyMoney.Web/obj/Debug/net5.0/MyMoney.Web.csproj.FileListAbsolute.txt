@@ -1413,3 +1413,4 @@ C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web\obj\Debug\net5.0\MyMoney.We
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web\obj\Debug\net5.0\ref\MyMoney.Web.dll
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web\obj\Debug\net5.0\MyMoney.Web.pdb
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web\obj\Debug\net5.0\MyMoney.Web.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\MyMoney\src\Web\MyMoney.Web\obj\Debug\net5.0\Razor\Views\Home\Catalogue.cshtml.g.cs

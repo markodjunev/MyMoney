@@ -23,3 +23,4 @@ C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\ne
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.dll
 C:\Users\st\source\repos\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.pdb
+C:\Users\User\Documents\GitHub\MyMoney\src\Web\MyMoney.Web.Infrastructure\obj\Debug\netstandard2.1\MyMoney.Web.Infrastructure.csproj.AssemblyReference.cache
