@@ -131,7 +131,9 @@
             // филтър 1
             if (input.TypeOfPaymentOfInterestId != 5)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.TypeOfPaymentOfInterestId != input.TypeOfPaymentOfInterestId)
                     {
@@ -143,7 +145,9 @@
             // филтър 2
             if (input.WhoIsDepositForId != 4)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.WhoIsDepositForId != input.WhoIsDepositForId)
                     {
@@ -155,7 +159,9 @@
             // филтър 3
             if (input.TypeOfInterestId != 3)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.TypeOfInterestId != input.TypeOfInterestId)
                     {
@@ -167,7 +173,9 @@
             // филтър 4
             if (input.AdditionOfAmountsId != 3)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.AdditionOfAmountsId != input.AdditionOfAmountsId)
                     {
@@ -179,7 +187,9 @@
             // филтър 5
             if (input.OverdraftPossibilityId != 3)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.OverdraftPossibilityId != input.OverdraftPossibilityId)
                     {
@@ -191,7 +201,9 @@
             // филтър 6
             if (input.OpportunityForCreditId != 3)
             {
-                foreach (Deposit element in deposits)
+                List<Deposit> copy = new(deposits);
+
+                foreach (Deposit element in copy)
                 {
                     if (element.OpportunityForCreditId != input.OpportunityForCreditId)
                     {
