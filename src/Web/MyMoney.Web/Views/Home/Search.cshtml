@@ -1,0 +1,157 @@
+﻿@model MyMoney.Web.ViewModels.Home.Search.SearchViewModel
+@using MyMoney.Data.Models.Enums
+@{
+    this.ViewData["Title"] = "Търсене";
+    var typeOfDeposits = Model.TypeOfDeposits.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var typeOfPaymentOfInterests = Model.TypeOfPaymentOfInterests.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var whoIsDepositFor = Model.WhoIsDepositFor.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var typeOfInterests = Model.TypeOfInterests.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var additionOfAmounts = Model.AdditionOfAmounts.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var overdraftPossibilities = Model.OverdraftPossibilities.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var opportunityForCredit = Model.OpportunityForCredit.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+}
+
+<h2 class="text-center mb-2">Намерете подходящия срочен депозит за Вас според критерии</h2>
+
+<hr />
+
+
+<form method="get" asp-action="SearchForDeposits">
+    <div class="form-row">
+        <div class="form-group col">
+            <div class="d-flex justify-content-center">
+                <label asp-for="@Model.TypeOfDepositId"></label>
+            </div>
+            <select asp-for="@Model.TypeOfDepositId" asp-items="typeOfDeposits" class="form-control">
+                @*<option selected="selected" value="">Моля изберете</option>*@
+            </select>
+            <span asp-validation-for="@Model.TypeOfDepositId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col">
+            <div class="d-flex justify-content-center">
+                <label asp-for="@Model.Amount"></label>
+            </div>
+            <input asp-for="@Model.Amount" class="form-control" type="number" step="any" placeholder="Сума..." />
+            <span asp-validation-for="@Model.Amount" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <div class="form-row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <label asp-for="@Model.Currency"></label>
+            </div>
+            <select asp-for="@Model.Currency" asp-items="Html.GetEnumSelectList<TypeOfCurrency>()" class="form-control">
+                @*<option selected="selected" value="">Моля изберете</option>*@
+            </select>
+            <span asp-validation-for="@Model.Currency" class="text-danger"></span>
+        </div>
+
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <label asp-for="@Model.TermOfTheDeposit"></label>
+            </div>
+            <input asp-for="@Model.TermOfTheDeposit" class="form-control" type="number" placeholder="Месеци..." />
+            <span asp-validation-for="@Model.TermOfTheDeposit" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <br />
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-outline-primary" 
+                id="collapsableSettings" 
+                type="button" 
+                data-toggle="collapse"
+                data-target="#collapseExample" 
+                aria-expanded="false" 
+                aria-controls="collapseExample">
+            Допълнително
+        </button>
+    </div>
+    <hr />
+    @* TODO: ADD DEFAULT SELECTED "Без значение"*@
+    <div class="collapse" id="collapseExample">
+        <div class="form-row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.TypeOfPaymentOfInterestId"></label>
+                </div>
+                <select asp-for="@Model.TypeOfPaymentOfInterestId" asp-items="typeOfPaymentOfInterests" class="form-control">
+                    @*<option selected="selected" value="">Моля изберете</option>*@
+                </select>
+                <span asp-validation-for="@Model.TypeOfPaymentOfInterestId" class="text-danger"></span>
+            </div>
+
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.WhoIsDepositForId"></label>
+                </div>
+                <select asp-for="@Model.WhoIsDepositForId" asp-items="whoIsDepositFor" class="form-control">
+                    @*<option selected="selected" value=""></option>*@
+                </select>
+                <span asp-validation-for="@Model.WhoIsDepositForId" class="text-danger"></span>
+            </div>
+
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.TypeOfInterestId"></label>
+                </div>
+                <select asp-for="@Model.TypeOfInterestId" asp-items="typeOfInterests" class="form-control">
+                    @*<option selected="selected" value="">Моля изберете</option>*@
+                </select>
+                <span asp-validation-for="@Model.TypeOfInterestId" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <hr />
+
+        <div class="form-row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.AdditionOfAmountsId"></label>
+                </div>
+                <select asp-for="@Model.AdditionOfAmountsId" asp-items="additionOfAmounts" class="form-control">
+                    @*<option selected="selected" value="">Моля изберете</option>*@
+                </select>
+                <span asp-validation-for="@Model.AdditionOfAmountsId" class="text-danger"></span>
+            </div>
+
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.OverdraftPossibilityId"></label>
+                </div>
+                <select asp-for="@Model.OverdraftPossibilityId" asp-items="overdraftPossibilities" class="form-control">
+                    @*<option selected="selected" value="">Моля изберете</option>*@
+                </select>
+                <span asp-validation-for="@Model.OverdraftPossibilityId" class="text-danger"></span>
+            </div>
+
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <label asp-for="@Model.OpportunityForCreditId"></label>
+                </div>
+                <select asp-for="@Model.OpportunityForCreditId" asp-items="opportunityForCredit" class="form-control">
+                    @*<option selected="selected" value="">Моля изберете</option>*@
+                </select>
+                <span asp-validation-for="@Model.OpportunityForCreditId" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <hr />
+    </div>
+
+    <br />
+
+    <div class="d-flex justify-content-center">
+        <input type="submit" class="btn btn-primary" />
+    </div>
+
+</form>
+

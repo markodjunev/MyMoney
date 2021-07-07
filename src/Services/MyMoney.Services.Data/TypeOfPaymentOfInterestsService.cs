@@ -20,7 +20,7 @@
         public IEnumerable<T> GetAll<T>()
         {
             IQueryable<TypeOfPaymentOfInterest> query =
-                this.typeOfPaymentOfInterestsRepository.All().OrderBy(x => x.Name);
+                this.typeOfPaymentOfInterestsRepository.All().OrderBy(x => x.Id).Reverse();
 
             return query.To<T>().ToList();
         }

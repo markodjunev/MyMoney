@@ -5,6 +5,8 @@
 
     using MyMoney.Data.Models.Enums;
     using MyMoney.Web.ViewModels.Deposits.OutputViewModels;
+    using MyMoney.Web.ViewModels.Home.Catalogue;
+    using MyMoney.Web.ViewModels.Home.Search;
 
     public interface IDepositsService
     {
@@ -23,5 +25,7 @@
         bool Exist(string id);
 
         DepositCalculationViewModel GetCalculationViewModel(string id);
+
+        public IEnumerable<DepositListingViewModel> GetCatalogueViewModels(SearchViewModel input);
     }
 }

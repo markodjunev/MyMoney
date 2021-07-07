@@ -24,7 +24,7 @@
                 <label asp-for="@Model.TypeOfDepositId"></label>
             </div>
             <select asp-for="@Model.TypeOfDepositId" asp-items="typeOfDeposits" class="form-control">
-                <option selected="selected" value="">Моля изберете</option>
+                <option selected="" value="">Моля изберете</option>
             </select>
             <span asp-validation-for="@Model.TypeOfDepositId" class="text-danger"></span>
         </div>

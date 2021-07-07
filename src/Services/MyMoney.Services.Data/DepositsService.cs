@@ -10,6 +10,8 @@
     using MyMoney.Services.Data.Interfaces;
     using MyMoney.Services.Mapping;
     using MyMoney.Web.ViewModels.Deposits.OutputViewModels;
+    using MyMoney.Web.ViewModels.Home.Catalogue;
+    using MyMoney.Web.ViewModels.Home.Search;
 
     public class DepositsService : IDepositsService
     {
@@ -110,6 +112,118 @@
             calculationViewModel.FinalAmount = finalAmount;
 
             return calculationViewModel;
+        }
+
+        public IEnumerable<DepositListingViewModel> GetCatalogueViewModels(SearchViewModel input)
+        {
+            IQueryable<Deposit> query =
+                this.depositsRepository
+                .All()
+                .Where(x =>
+                        x.Amount <= input.Amount &&
+                        x.TypeOfDepositId == input.TypeOfDepositId &&
+                        x.Currency.Equals(input.Currency) &&
+                        x.TermOfTheDeposit == input.TermOfTheDeposit)
+                .OrderBy(x => x.Name);
+
+            List<Deposit> deposits = query.ToList();
+
+            // филтър 1
+            if (input.TypeOfPaymentOfInterestId != 5)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.TypeOfPaymentOfInterestId != input.TypeOfPaymentOfInterestId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            // филтър 2
+            if (input.WhoIsDepositForId != 4)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.WhoIsDepositForId != input.WhoIsDepositForId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            // филтър 3
+            if (input.TypeOfInterestId != 3)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.TypeOfInterestId != input.TypeOfInterestId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            // филтър 4
+            if (input.AdditionOfAmountsId != 3)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.AdditionOfAmountsId != input.AdditionOfAmountsId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            // филтър 5
+            if (input.OverdraftPossibilityId != 3)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.OverdraftPossibilityId != input.OverdraftPossibilityId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            // филтър 6
+            if (input.OpportunityForCreditId != 3)
+            {
+                foreach (Deposit element in deposits)
+                {
+                    if (element.OpportunityForCreditId != input.OpportunityForCreditId)
+                    {
+                        deposits.Remove(element);
+                    }
+                }
+            }
+
+            IEnumerable<DepositListingViewModel> returner = new List<DepositListingViewModel>();
+
+            // fucking RIP automapper...
+            foreach (Deposit deposit in deposits)
+            {
+                DepositListingViewModel temp = new()
+                {
+                    Id = deposit.Id,
+                    Amount = deposit.Amount,
+                    BankId = deposit.BankId,
+                    //BankName = deposit.Bank.Name,
+                    Currency = deposit.Currency,
+                    Name = deposit.Name,
+                    TypeOfInterestId = deposit.TypeOfInterestId,
+                    //TypeOfInterestName = deposit.TypeOfPaymentOfInterest.Name,
+                    TypeOfPaymentOfInterestId = deposit.TypeOfPaymentOfInterestId,
+                    //TypeOfPaymentOfInterestName = deposit.TypeOfPaymentOfInterest.Name,
+                };
+
+                returner = returner.Concat(new[] { temp });
+            }
+
+
+            return returner;
         }
     }
 }
