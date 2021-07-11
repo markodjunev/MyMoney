@@ -1,5 +1,6 @@
 ﻿namespace MyMoney.Services.Data
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -105,11 +106,97 @@
 
             var finalAmount = 0m; // calculation
 
-            /*
-             implementation of final amount
-             */
+            var startingAmount = deposit.Amount;                      // нач. сума
+            var interest = deposit.EffectiveAnnualInterestRate / 100; // лихва
+            decimal tax = 8 / 100m;                                        // данък
 
-            calculationViewModel.FinalAmount = finalAmount;
+              // на падеж
+            if (deposit.TypeOfPaymentOfInterestId == 4)
+            {
+                var interestAmount = startingAmount - ((startingAmount * interest) - ((startingAmount * interest) * tax));
+                finalAmount = startingAmount + interestAmount;
+            } // авансово
+            else if (deposit.TypeOfPaymentOfInterestId == 3)
+            {
+                // avoid using the slow Math.Pow()
+                var pow = ((1 + interest) * (1 + interest)) - 1;
+                var interestAmount = (startingAmount * pow) - ((startingAmount * pow) * tax);
+                finalAmount = startingAmount + interestAmount;
+            } // ежемесечно
+            else if (deposit.TypeOfPaymentOfInterestId == 2)
+            {
+                var currentAmount = startingAmount;
+                var perMonthPercentInterest = deposit.EffectiveAnnualInterestRate / 12;
+
+                foreach (int month in Enumerable.Range(1, deposit.TermOfTheDeposit))
+                {
+                    var currMonthInterest = currentAmount * perMonthPercentInterest;
+                    var currentTax = currMonthInterest * tax;
+                    currentAmount += currMonthInterest - currentTax;
+                }
+
+                finalAmount = currentAmount;
+            } // на край на период
+            else if (deposit.TypeOfPaymentOfInterestId == 1)
+            {
+                var totalMonths = deposit.TermOfTheDeposit;
+
+                int yearCounter = 0;
+                int monthCounter = 1;
+
+                int leftoverMonths = 0;
+                var leftoverAmount = 0m;
+
+                var currentAmount = startingAmount;
+
+                foreach (int month in Enumerable.Range(1, totalMonths))
+                {
+                    if (month % 12 == 0)
+                    {
+                        yearCounter++;
+                    }
+
+                    monthCounter++;
+                }
+
+                leftoverMonths = totalMonths - (yearCounter * 12);
+
+                // e.g. 28 months or 18
+                if (leftoverMonths > 0 && yearCounter > 0)
+                {
+                    foreach (int year in Enumerable.Range(1, yearCounter))
+                    {
+                        currentAmount += (currentAmount * interest) - ((currentAmount * interest) * tax);
+                    }
+
+                    var monthlyInterest = interest / 12;
+
+                    leftoverAmount += currentAmount * (monthlyInterest * leftoverMonths);
+                    leftoverAmount -= leftoverAmount * tax;
+
+                    finalAmount += currentAmount + leftoverAmount;
+                } // when its 12/24/36 etc, aka full year(s)
+                else if (yearCounter > 0)
+                {
+                    foreach (int year in Enumerable.Range(1, yearCounter))
+                    {
+                        currentAmount += (currentAmount * interest) - ((currentAmount * interest) * tax);
+                    }
+
+                    finalAmount = currentAmount;
+                } // then its just a few months
+                else
+                {
+                    var monthlyInterest = interest / 12;
+
+                    leftoverAmount += currentAmount * (monthlyInterest * leftoverMonths);
+                    leftoverAmount -= leftoverAmount * tax;
+
+                    finalAmount += leftoverAmount;
+                }
+            }
+
+            calculationViewModel.FinalAmount = decimal.Round(finalAmount, 2, MidpointRounding.AwayFromZero);
 
             return calculationViewModel;
         }
