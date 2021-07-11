@@ -214,26 +214,12 @@
 
             IEnumerable<DepositListingViewModel> returner = new List<DepositListingViewModel>();
 
-            // fucking RIP automapper...
             foreach (Deposit deposit in deposits)
             {
-                DepositListingViewModel temp = new()
-                {
-                    Id = deposit.Id,
-                    Amount = deposit.Amount,
-                    BankId = deposit.BankId,
-                    //BankName = deposit.Bank.Name,
-                    Currency = deposit.Currency,
-                    Name = deposit.Name,
-                    TypeOfInterestId = deposit.TypeOfInterestId,
-                    //TypeOfInterestName = deposit.TypeOfPaymentOfInterest.Name,
-                    TypeOfPaymentOfInterestId = deposit.TypeOfPaymentOfInterestId,
-                    //TypeOfPaymentOfInterestName = deposit.TypeOfPaymentOfInterest.Name,
-                };
+                DepositListingViewModel temp = this.GetById<DepositListingViewModel>(deposit.Id);
 
                 returner = returner.Concat(new[] { temp });
             }
-
 
             return returner;
         }
