@@ -74,12 +74,28 @@
         public IActionResult FilterByDropdowns(int currency, int typeOfPaymentOfInterestId)
         {
             TypeOfCurrency currency1 = (TypeOfCurrency)currency;
-            ShowCatalogueViewModel input = new()
+
+            _ = new ShowCatalogueViewModel();
+            ShowCatalogueViewModel input;
+
+            if (typeOfPaymentOfInterestId != 5)
             {
-                Deposits = this.depositsService.GetAllByCurrencyAndTypeOfPaymentOfInterestId<DepositListingViewModel>(currency1, typeOfPaymentOfInterestId),
-                Banks = this.banksService.GetAll<BankListingViewModel>(),
-                TypeOfPaymentOfInterests = this.typeOfPaymentOfInterestsService.GetAll<ViewModels.Home.Catalogue.TypeOfPaymentOfInterestDropDownViewModel>(),
-            };
+                input = new()
+                {
+                    Deposits = this.depositsService.GetAllByCurrencyAndTypeOfPaymentOfInterestId<DepositListingViewModel>(currency1, typeOfPaymentOfInterestId),
+                    Banks = this.banksService.GetAll<BankListingViewModel>(),
+                    TypeOfPaymentOfInterests = this.typeOfPaymentOfInterestsService.GetAll<ViewModels.Home.Catalogue.TypeOfPaymentOfInterestDropDownViewModel>(),
+                };
+            }
+            else
+            {
+                input = new()
+                {
+                    Deposits = this.depositsService.GetAllByCurrency<DepositListingViewModel>(currency1),
+                    Banks = this.banksService.GetAll<BankListingViewModel>(),
+                    TypeOfPaymentOfInterests = this.typeOfPaymentOfInterestsService.GetAll<ViewModels.Home.Catalogue.TypeOfPaymentOfInterestDropDownViewModel>(),
+                };
+            }
 
             return this.View("Catalogue", input);
         }

@@ -13,18 +13,30 @@
             this.depositsService = depositsService;
         }
 
-        public IActionResult Details(string id)
+        public IActionResult Details(string id, bool calculate)
         {
             if (this.depositsService.Exist(id) == false)
             {
                 return this.RedirectToAction("Error", "Home", new { area = string.Empty });
             }
 
-            var viewModel = new DepositInfoViewModel
+            _ = new DepositInfoViewModel();
+            DepositInfoViewModel viewModel;
+
+            if (!calculate)
             {
-                DepositDetailsViewModel = this.depositsService.GetById<DepositDetailsViewModel>(id),
-                DepositCalculationViewModel = this.depositsService.GetCalculationViewModel(id),
-            };
+                viewModel = new DepositInfoViewModel
+                {
+                    DepositDetailsViewModel = this.depositsService.GetById<DepositDetailsViewModel>(id),
+                };
+            }
+            else
+            {
+                viewModel = new DepositInfoViewModel
+                {
+                    DepositCalculationViewModel = this.depositsService.GetCalculationViewModel(id),
+                };
+            }
 
             return this.View(viewModel);
         }

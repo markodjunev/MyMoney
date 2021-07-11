@@ -64,6 +64,17 @@
             return query.To<T>().ToList();
         }
 
+        public IEnumerable<T> GetAllByCurrency<T>(TypeOfCurrency currency)
+        {
+            IQueryable<Deposit> query =
+                this.depositsRepository
+                .All()
+                .Where(x => x.Currency.Equals(currency))
+                .OrderBy(x => x.Name);
+
+            return query.To<T>().ToList();
+        }
+
         public IEnumerable<T> GetAllByCurrencyAndTypeOfPaymentOfInterestId<T>(TypeOfCurrency currency, int typeOfPaymentOfInterestId)
         {
             IQueryable<Deposit> query =
@@ -99,40 +110,114 @@
 
             var calculationViewModel = new DepositCalculationViewModel
             {
+                Name = deposit.Name,
                 Amount = deposit.Amount,
+                TypeOfCurrency = deposit.Currency,
                 EffectiveAnnualInterestRate = deposit.EffectiveAnnualInterestRate,
                 TermOfTheDeposit = deposit.TermOfTheDeposit,
+                Collections = new DepositCalculationCollectionsViewModel
+                {
+                    MonthlyInterestTaxes = new List<decimal>(deposit.TermOfTheDeposit),
+                    MonthlyInterestAmount = new List<decimal>(deposit.TermOfTheDeposit),
+                    MonthlyStartingAmount = new List<decimal>(deposit.TermOfTheDeposit),
+                    MonthlyNetPaid = new List<decimal>(deposit.TermOfTheDeposit),
+                },
             };
 
             var finalAmount = 0m; // calculation
 
-            var startingAmount = deposit.Amount;                      // нач. сума
+            var startingAmount = deposit.Amount;         // нач. сума
             var interest = deposit.EffectiveAnnualInterestRate / 100; // лихва
-            decimal tax = 8 / 100m;                                        // данък
+            var tax = 8 / 100m;                                   // данък
+            decimal monthlyInterest = interest / 12m;                      // данък на месец
 
-              // на падеж
+            // на падеж
             if (deposit.TypeOfPaymentOfInterestId == 4)
             {
                 var interestAmount = startingAmount - ((startingAmount * interest) - ((startingAmount * interest) * tax));
-                finalAmount = startingAmount + interestAmount;
+                finalAmount = startingAmount + (startingAmount - interestAmount);
+
+                for (int i = 1; i < deposit.TermOfTheDeposit + 1; i++)
+                {
+                    calculationViewModel.Collections.MonthlyStartingAmount.Add(startingAmount);
+
+                    if (i % 12 == 0 || i == deposit.TermOfTheDeposit)
+                    {
+                        calculationViewModel
+                            .Collections
+                            .MonthlyInterestAmount.Add(decimal.Round(startingAmount * interest, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel
+                            .Collections
+                            .MonthlyInterestTaxes.Add(decimal.Round((startingAmount * interest) * tax, 2, MidpointRounding.AwayFromZero));
+                    }
+                    else
+                    {
+                        calculationViewModel.Collections.MonthlyInterestAmount.Add(0);
+                        calculationViewModel.Collections.MonthlyInterestTaxes.Add(0);
+                    }
+
+                    if (i == deposit.TermOfTheDeposit)
+                    {
+                        calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(finalAmount, 2, MidpointRounding.AwayFromZero));
+                    }
+                    else
+                    {
+                        calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(startingAmount, 2, MidpointRounding.AwayFromZero));
+                    }
+                }
             } // авансово
             else if (deposit.TypeOfPaymentOfInterestId == 3)
             {
-                // avoid using the slow Math.Pow()
-                var pow = ((1 + interest) * (1 + interest)) - 1;
+                // starting amount × ((1 + interest) ^ (months÷12)−1)
+                decimal pow = (decimal)(Math.Pow((double)(1m + interest), deposit.TermOfTheDeposit / 12.0) - 1.0);
+
                 var interestAmount = (startingAmount * pow) - ((startingAmount * pow) * tax);
                 finalAmount = startingAmount + interestAmount;
+
+                for (int i = 1; i < deposit.TermOfTheDeposit + 1; i++)
+                {
+                    if (i == 1)
+                    {
+                        calculationViewModel.Collections.MonthlyStartingAmount.Add(decimal.Round(startingAmount, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel.Collections.MonthlyInterestAmount.Add(decimal.Round(startingAmount * pow, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel.Collections.MonthlyInterestTaxes.Add(decimal.Round((startingAmount * pow) * tax, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(finalAmount, 2, MidpointRounding.AwayFromZero));
+                    }
+                    else
+                    {
+                        calculationViewModel.Collections.MonthlyStartingAmount.Add(decimal.Round(finalAmount, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel.Collections.MonthlyInterestAmount.Add(0);
+                        calculationViewModel.Collections.MonthlyInterestTaxes.Add(0);
+                        calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(finalAmount, 2, MidpointRounding.AwayFromZero));
+                    }
+                }
+
             } // ежемесечно
             else if (deposit.TypeOfPaymentOfInterestId == 2)
             {
                 var currentAmount = startingAmount;
-                var perMonthPercentInterest = deposit.EffectiveAnnualInterestRate / 12;
+                var perMonthPercentInterest = interest / 12;
 
-                foreach (int month in Enumerable.Range(1, deposit.TermOfTheDeposit))
+                for (int i = 1; i < deposit.TermOfTheDeposit + 1; i++)
                 {
                     var currMonthInterest = currentAmount * perMonthPercentInterest;
                     var currentTax = currMonthInterest * tax;
-                    currentAmount += currMonthInterest - currentTax;
+
+                    calculationViewModel.Collections.MonthlyInterestAmount.Add(decimal.Round(currMonthInterest, 2, MidpointRounding.AwayFromZero));
+                    calculationViewModel.Collections.MonthlyInterestTaxes.Add(decimal.Round(currentTax, 2, MidpointRounding.AwayFromZero));
+
+                    if (i == 1)
+                    {
+                        calculationViewModel.Collections.MonthlyStartingAmount.Add(decimal.Round(startingAmount, 2, MidpointRounding.AwayFromZero));
+                        currentAmount += currMonthInterest - currentTax;
+                    }
+                    else
+                    {
+                        calculationViewModel.Collections.MonthlyStartingAmount.Add(decimal.Round(currentAmount, 2, MidpointRounding.AwayFromZero));
+                        currentAmount += currMonthInterest - currentTax;
+                    }
+
+                    calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(currentAmount, 2, MidpointRounding.AwayFromZero));
                 }
 
                 finalAmount = currentAmount;
@@ -161,6 +246,7 @@
 
                 leftoverMonths = totalMonths - (yearCounter * 12);
 
+                // TODO : simplify if-else, possibly in a single function
                 // e.g. 28 months or 18
                 if (leftoverMonths > 0 && yearCounter > 0)
                 {
@@ -168,8 +254,6 @@
                     {
                         currentAmount += (currentAmount * interest) - ((currentAmount * interest) * tax);
                     }
-
-                    var monthlyInterest = interest / 12;
 
                     leftoverAmount += currentAmount * (monthlyInterest * leftoverMonths);
                     leftoverAmount -= leftoverAmount * tax;
@@ -187,12 +271,35 @@
                 } // then its just a few months
                 else
                 {
-                    var monthlyInterest = interest / 12;
-
                     leftoverAmount += currentAmount * (monthlyInterest * leftoverMonths);
                     leftoverAmount -= leftoverAmount * tax;
 
                     finalAmount += leftoverAmount;
+                }
+
+                currentAmount = startingAmount;
+
+                for (int i = 1; i < deposit.TermOfTheDeposit + 1; i++)
+                {
+                    calculationViewModel.Collections.MonthlyStartingAmount.Add(decimal.Round(startingAmount, 2, MidpointRounding.AwayFromZero));
+
+                    if (i % 12 == 0 || i == deposit.TermOfTheDeposit)
+                    {
+                        calculationViewModel
+                            .Collections
+                            .MonthlyInterestAmount.Add(decimal.Round(startingAmount * interest, 2, MidpointRounding.AwayFromZero));
+                        calculationViewModel
+                            .Collections
+                            .MonthlyInterestTaxes.Add(decimal.Round((startingAmount * interest) * tax, 2, MidpointRounding.AwayFromZero));
+                        startingAmount += (startingAmount * interest) - ((startingAmount * interest) * tax);
+                    }
+                    else
+                    {
+                        calculationViewModel.Collections.MonthlyInterestAmount.Add(0);
+                        calculationViewModel.Collections.MonthlyInterestTaxes.Add(0);
+                    }
+
+                    calculationViewModel.Collections.MonthlyNetPaid.Add(decimal.Round(startingAmount, 2, MidpointRounding.AwayFromZero));
                 }
             }
 

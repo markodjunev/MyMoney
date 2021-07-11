@@ -102,6 +102,7 @@
                     asp-controller="Deposits"
                     asp-action="Details"
                     asp-route-id="@deposit.Id"
+                    asp-route-calculate="false"
                       class="ml-auto p-2">
                     <button type="submit" class="btn btn-outline-primary">ПОДРОБНОСТИ</button>
                 </form>
@@ -109,6 +110,7 @@
                     asp-controller="Deposits"
                     asp-action="Details"
                     asp-route-id="@deposit.Id"
+                    asp-route-calculate="true"
                       class="ml-auto p-2">
                     <button type="submit" class="btn btn-primary">ИЗЧИСЛИ</button>
                 </form>

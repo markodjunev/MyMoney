@@ -18,6 +18,8 @@
 
         IEnumerable<T> GetAll<T>();
 
+        IEnumerable<T> GetAllByCurrency<T>(TypeOfCurrency currency);
+
         IEnumerable<T> GetAllByCurrencyAndTypeOfPaymentOfInterestId<T>(TypeOfCurrency currency, int typeOfPaymentOfInterestId);
 
         IEnumerable<T> GetAllByBankId<T>(string bankId);
