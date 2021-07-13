@@ -26,7 +26,7 @@
 
         bool Exist(string id);
 
-        DepositCalculationViewModel GetCalculationViewModel(string id);
+        DepositCalculationViewModel GetCalculationViewModel(string id, decimal initialAmount);
 
         public IEnumerable<DepositListingViewModel> GetCatalogueViewModels(SearchViewModel input);
     }

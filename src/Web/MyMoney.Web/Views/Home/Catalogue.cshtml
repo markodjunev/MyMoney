@@ -78,14 +78,14 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Минимална сума</th>
-                                    <th scope="col">Лихва</th>
+                                    <th scope="col">Валута</th>
                                     <th scope="col">Изплащане на лихви</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>@deposit.Amount</td>
-                                    <td>@deposit.TypeOfInterestName</td>
+                                    <td>@deposit.Currency.ToString()</td>
                                     <td>@deposit.TypeOfPaymentOfInterestName</td>
                                 </tr>
                             </tbody>
@@ -103,6 +103,7 @@
                     asp-action="Details"
                     asp-route-id="@deposit.Id"
                     asp-route-calculate="false"
+                    asp-route-initialAmount="0"
                       class="ml-auto p-2">
                     <button type="submit" class="btn btn-outline-primary">ПОДРОБНОСТИ</button>
                 </form>
@@ -111,6 +112,7 @@
                     asp-action="Details"
                     asp-route-id="@deposit.Id"
                     asp-route-calculate="true"
+                    asp-route-initialAmount="0"
                       class="ml-auto p-2">
                     <button type="submit" class="btn btn-primary">ИЗЧИСЛИ</button>
                 </form>

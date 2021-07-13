@@ -1,6 +1,7 @@
 ﻿@model MyMoney.Web.ViewModels.Deposits.OutputViewModels.DepositInfoViewModel;
 @{
     this.ViewData["Title"] = "Депозит детайли";
+    var inputField = "";
 }
 
 @if (Model.DepositCalculationViewModel == null)
@@ -129,8 +130,12 @@ else
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="col">Сума</th>
+                            <th scope="col">Минимална Сума</th>
                             <td>@Model.DepositCalculationViewModel.Amount</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Цена след края на минималния депозит</th>
+                            <td>@Model.DepositCalculationViewModel.FinalAmount</td>
                         </tr>
                         <tr>
                             <th scope="col">Ефективна Годишна Лихва</th>
@@ -141,13 +146,20 @@ else
                             <td>@Model.DepositCalculationViewModel.TermOfTheDeposit</td>
                         </tr>
                         <tr>
-                            <th scope="col">Цена след края на депозита</th>
-                            <td>@Model.DepositCalculationViewModel.FinalAmount</td>
-                        </tr>
-                        <tr>
                             <th scope="col">Валута</th>
                             <td>@Model.DepositCalculationViewModel.TypeOfCurrency</td>
                         </tr>
+                        @if(@Model.DepositCalculationViewModel.RequestedAmount != 0)
+                        {
+                        <tr>
+                            <th scope="col">Желана Сума</th>
+                            <td>@Model.DepositCalculationViewModel.InitialRequestedAmount</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Цена след края на желания депозит</th>
+                            <td>@Model.DepositCalculationViewModel.RequestedAmount</td>
+                        </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -157,6 +169,26 @@ else
     </div>
 
     <br />
+
+    
+    <div class="text-center d-flex justify-content-center row">
+        <form asp-controller="Deposits"
+              asp-action="Details"
+              asp-route-calculate="true"
+              asp-route-initialAmount="@inputField"
+              class="p-2 text-center form-inline">
+            <input class="form-control mx-auto m-2"
+                   name="initialAmount"
+                   style="max-width:130px"
+                   type="number" 
+                   min=@((double)Model.DepositCalculationViewModel.Amount)
+                   max="1000000"
+                   defaultValue="@((double)Model.DepositCalculationViewModel.Amount)"
+                   placeholder="@((double)Model.DepositCalculationViewModel.Amount)"/>
+            <div class="m-1"></div>
+            <button type="submit" class="btn btn-primary mx-auto m-2">ИЗЧИСЛИ НОВА СУМА</button>
+        </form>
+    </div>
 
     <div class="text-center">
         <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target=".bd-example-modal-lg">РАЗПЛАЩАТЕЛЕН ПЛАН</button>
@@ -177,7 +209,8 @@ else
                     </thead>
                     <tbody>
 
-                        @for (var curr = 0; curr < Model.DepositCalculationViewModel.TermOfTheDeposit; curr++) {
+                        @for (var curr = 0; curr < Model.DepositCalculationViewModel.TermOfTheDeposit; curr++)
+                        {
                             <tr>
                                 <th scope="row">@(curr+1)</th>
                                 <td>@Model.DepositCalculationViewModel.Collections.MonthlyStartingAmount.ElementAt(curr) </td>
@@ -186,7 +219,7 @@ else
                                 <td>@Model.DepositCalculationViewModel.Collections.MonthlyNetPaid.ElementAt(curr)</td>
                             </tr>
                         }
-                     
+
                     </tbody>
                 </table>
             </div>

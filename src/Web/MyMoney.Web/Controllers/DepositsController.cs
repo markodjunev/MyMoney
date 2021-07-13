@@ -13,7 +13,7 @@
             this.depositsService = depositsService;
         }
 
-        public IActionResult Details(string id, bool calculate)
+        public IActionResult Details(string id, bool calculate, decimal initialAmount)
         {
             if (this.depositsService.Exist(id) == false)
             {
@@ -34,7 +34,7 @@
             {
                 viewModel = new DepositInfoViewModel
                 {
-                    DepositCalculationViewModel = this.depositsService.GetCalculationViewModel(id),
+                    DepositCalculationViewModel = this.depositsService.GetCalculationViewModel(id, initialAmount),
                 };
             }
 
