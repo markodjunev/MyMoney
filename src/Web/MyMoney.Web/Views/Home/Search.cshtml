@@ -11,10 +11,9 @@
     var opportunityForCredit = Model.OpportunityForCredit.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
 }
 
-<h2 class="text-center mb-2">Намерете подходящия срочен депозит за Вас според критерии</h2>
+<h2 class="text-center mb-2">Намерете подходящия депозит за Вас</h2>
 
 <hr />
-
 
 <form method="get" asp-action="SearchForDeposits">
     <div class="form-row">
@@ -38,8 +37,6 @@
 
     </div>
 
-    <hr />
-
     <div class="form-row">
         <div class="col">
             <div class="d-flex justify-content-center">
@@ -62,6 +59,7 @@
     </div>
 
     <br />
+
     <div class="d-flex justify-content-center">
         <button class="btn btn-outline-primary" 
                 id="collapsableSettings" 
@@ -70,14 +68,16 @@
                 data-target="#collapseExample" 
                 aria-expanded="false" 
                 aria-controls="collapseExample">
-            Допълнително
+            ДОПЪЛНИТЕЛНО
         </button>
     </div>
+
     <hr />
-    @* TODO: ADD DEFAULT SELECTED "Без значение"*@
+
     <div class="collapse" id="collapseExample">
-        <div class="form-row">
-            <div class="col">
+        <div class="form-row d-flex flex-wrap">
+
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.TypeOfPaymentOfInterestId"></label>
                 </div>
@@ -87,7 +87,7 @@
                 <span asp-validation-for="@Model.TypeOfPaymentOfInterestId" class="text-danger"></span>
             </div>
 
-            <div class="col">
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.WhoIsDepositForId"></label>
                 </div>
@@ -97,7 +97,7 @@
                 <span asp-validation-for="@Model.WhoIsDepositForId" class="text-danger"></span>
             </div>
 
-            <div class="col">
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.TypeOfInterestId"></label>
                 </div>
@@ -111,18 +111,19 @@
 
         <hr />
 
-        <div class="form-row">
-            <div class="col">
+        <div class="form-row d-flex flex-wrap">
+
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.AdditionOfAmountsId"></label>
                 </div>
-                <select asp-for="@Model.AdditionOfAmountsId" asp-items="additionOfAmounts" class="form-control">
+                <select asp-for="@Model.AdditionOfAmountsId" asp-items="additionOfAmounts" class="form-control ">
                     @*<option selected="selected" value="">Моля изберете</option>*@
                 </select>
                 <span asp-validation-for="@Model.AdditionOfAmountsId" class="text-danger"></span>
             </div>
 
-            <div class="col">
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.OverdraftPossibilityId"></label>
                 </div>
@@ -132,7 +133,7 @@
                 <span asp-validation-for="@Model.OverdraftPossibilityId" class="text-danger"></span>
             </div>
 
-            <div class="col">
+            <div class="col-sm-4 mx-auto">
                 <div class="d-flex justify-content-center">
                     <label asp-for="@Model.OpportunityForCreditId"></label>
                 </div>
@@ -150,7 +151,7 @@
     <br />
 
     <div class="d-flex justify-content-center">
-        <input type="submit" class="btn btn-primary" />
+        <input type="submit" class="btn btn-primary" value="ТЪРСЕНЕ"/>
     </div>
 
 </form>
